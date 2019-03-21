@@ -1,0 +1,37 @@
+import turtle as t
+t.setup(650,350,200,200)##设置窗体大小及位置 setup（width，height，startx，starty）
+t.penup()
+t.fd(-250)
+t.pendown()
+t.pensize(25)
+t.pencolor("purple")
+t.seth(-40)   ##seth（）只变方向不行进
+for i in range(4):
+    t.circle(40,80)
+    t.circle(-40,80)
+    t.circle(40,80/2)
+    t.fd(40)
+    t.circle(16,180)
+    t.fd(40*2/3)
+    t.done()
+    
+    ##turtle.colormode(mode)颜色 1.0：rgb小数模式  255：rgb整数值模式
+##import使用方式  1.import<库名>
+                     <库名>.<函数名>（<函数参数>）
+                     2.form <库名> import*
+                      <函数名>（<函数参数>）
+                  3.import  <库名>  as <库别名>
+                  <库别名>.<函数名>（<函数参数>）
+                  ##   turtle.penup 别名  turtle.pu 将画笔抬起
+                            .pendown 
+                       turtlr.pensize(width)  别名 turtle.width(width)    画笔宽度
+                              pencolor（color）   画笔颜色
+                              颜色的三种表达方式：1颜色字符串  turtlr.pencolor（purple）
+                                                2  rgb的小数值 turtlr.pencolor（0.63,0.13,0.94）
+                                                3  rgb的元组值  同上
+                  方向控制函数turtle.setheading（angle）  别名turtle.seth（angle）angle：改变行进方向，海归走角度
+                  turtle.left（angle）左转   turtle.right（angle ）右转
+                  循环结构  for<变量> in range(<参数>)
+                       <被循环执行的语句>
+                       例 range（5）
+                       0,1,2,3,4
